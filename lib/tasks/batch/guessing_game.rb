@@ -4,21 +4,21 @@
 class Tasks::Batch::GuessingGame
   MAX_GUESSES = 3
   def self.execute
-    puts "----------------------"
-    puts "| Ruby Guessing Game |"
-    puts "----------------------"
+    puts '----------------------'
+    puts '| Ruby Guessing Game |'
+    puts '----------------------'
 
-    puts "What is your name?"
-    print "> "
+    puts 'What is your name?'
+    print '> '
     name = gets.chomp
 
     puts "Hello, #{name}."
-    puts "We are going to play a guessing game."
-    puts "I will choose a random number between 1 and 10"
-    puts "and you will have three chances to guess it."
+    puts 'We are going to play a guessing game.'
+    puts 'I will choose a random number between 1 and 10'
+    puts 'and you will have three chances to guess it.'
 
-    number = rand(10) + 1
-    puts "Okay, I have my number."
+    number = rand(1..10)
+    puts 'Okay, I have my number.'
 
     1.upto(MAX_GUESSES) do |guess_num|
       print "Guess #{guess_num}: "
@@ -31,7 +31,7 @@ class Tasks::Batch::GuessingGame
         puts "Sorry, that wasn't it."
         if guess_num == MAX_GUESSES
           puts
-          puts "That was your last guess."
+          puts 'That was your last guess.'
           puts "My number was #{number}."
         end
       end
